@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+header input {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+    max-width: 400px;
+}
+
+main {
+    padding: 2rem;
+}
+
+section#categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.category {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    background-color: white;
+    flex: 1 1 calc(33.333% - 4rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category h2 {
+    margin-top: 0;
+    font-weight: 700;
+    color: #0073e6;
+}
+
+.category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+.category ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.category ul li a:hover {
+    color: #0073e6;
+}
+
+section#addWebsite {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section#addWebsite h2 {
+    font-weight: 700;
+    color: #333;
+}
+
+section#addWebsite form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+section#addWebsite form label {
+    font-weight: 700;
+}
+
+section#addWebsite form input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+section#addWebsite form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #0073e6;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+section#addWebsite form button:hover {
+    background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+    .category {
+        flex: 1 1 calc(50% - 4rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .category {
+        flex: 1 1 100%;
+    }
+}
